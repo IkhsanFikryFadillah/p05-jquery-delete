@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>5 Teman Terbaik</title>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<style type="text/css">
+	table{
+	font-family: sans-serif;
+	color: black;
+	border-collapse: collapse;
+	width: 100px;
+	border: 1px solid #f2f5f7;
+	background: mistyrose;
+	
+}
+	table tr th {
+	background: lightcoral;
+	color: white;
+	font-weight: normal;
+}
+
+	table, th, td {
+	padding: 8px 20px;
+	text-align: center;
+	
+
+}
+
+	table td:hover{
+	background-color: lightcoral;
+
+}
+	body{
+		background: lightgrey;
+	}
+    
+</style>
+</head>
+<body>
+	<h1 align="center">5 Kawan terbaik</h1>
+	<table class="tabelku">
+
+<table class="tabelku" border="2" align="center">
+  <tr>
+  	<th>No</th>
+  	<th>Nama</th>
+  	<th>Alamat</th>
+  	<th>Aksi</th>
+  </tr>
+
+    <tr id="up_1" class="up">
+                <td>1</td>
+                <td class="node" id="mhs_1">Supta Daniel</td>
+                <td class="node" id="alamat_1">Cirebon</td>
+                <td class="node top1" id="hapus_1">Hapus</td>
+            </tr>
+            <tr id="up_2" class="up">
+                <td>2</td>
+                <td class="node" id="mhs_2">Ryanza</td>
+                <td class="node" id="alamat_2">Cirebon</td>
+                <td class="node top1" id="hapus_2">Hapus</td>
+            </tr>
+            <tr id="up_3" class="up">
+                <td>3</td>
+                <td class="node" id="mhs_3">Yoga</td>
+                <td class="node" id="alamat_3">Depok</td>
+                <td class="node top1" id="hapus_3">Hapus</td>
+            </tr>
+            <tr id="up_4" class="up">
+                <td>4</td>
+                <td class="node" id="mhs_4">Adam</td>
+                <td class="node" id="alamat_4">Bekasi</td>
+                <td class="node top1" id="hapus_4">Hapus</td>
+            </tr>
+            <tr id="up_5" class="up">
+                <td>5</td>
+                <td class="node" id="mhs_5">Intan</td>
+                <td class="node" id="alamat_5">Bandung</td>
+                <td class="node top1" id="hapus_5">Hapus</td>
+            </tr>
+	
+</table>
+</body>
+</html>
+<div class="tombol-back-teman-css" align="center" width="100">
+	<br>
+      <button a onclick="alert('Kamu ingin kembali?')" href="../index.html">Back to Home</button>
+    </div>
+
+<script>
+	$(document).ready(function(){
+		//alert(0)
+		$('.nama_mhs').click(function(){
+			//alert(1)
+			let isi = $(this).text();
+			//alert(isi);
+			let isi2 = prompt('ubah dengan:, isi');
+			if(!isi2) return;
+			//alert(isi2);
+
+			$(this).text(isi2);
+		})
+
+		$('.Hapus').click(function(){
+			//alert(1)
+			let yakin = confirm('yakin ingin menghapus?');
+			if(!yakin) return;
+
+			let id = $(this).prop('id');
+			//alert(id);
+
+			let rid = id.split('__');
+			let baris_ke = rid[1];
+
+			//alert(baris_ke);
+
+            $('#row__'+baris_ke).fadeOut();
+
+			//alert('Anda yakin')
+		})
+
+		$('.Alamat_mhs').click(function(){
+			//alert(1)
+			let isi = $(this).text();
+			//alert(isi);
+			let isi2 = prompt('ubah dengan:, isi');
+			if(!isi2) return;
+			//alert(isi2);
+			$(this).text(isi2);
+
+		})
+	})
+</script>
